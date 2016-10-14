@@ -1,0 +1,36 @@
+<div class="col-md-4">
+    <div class="logo-space text-center vmo-heading-large-screen">
+        <a href="index.html"><img src="{{vm.tempLogo}}" class="vmo-resto-logo img-responsive" alt=""></a>
+    </div>
+    <div class="vmo-thubmnail-recent primaryColor text-center">
+        <h1 class="social-font secondaryfont primaryColor">Beerboard.Menu</h1>
+        <img src="{{vm.imageContext}}/images/sline.png" alt="">
+        <div class="row">
+            <div class="col-sm-2 vmo-get-social">
+                <img class="vmo-img-margin30" src="{{vm.imageContext}}/images/checkinChalk.png" alt="">
+            </div>
+            <div class="col-sm-10 vmo-get-social">
+                <h3 class="primaryfont secondaryColor">Access Our Beer List Online</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2 vmo-get-social">
+                <img class="vmo-img-margin30" src="{{vm.imageContext}}/images/likeChalk.png" alt="">
+            </div>
+            <div class="col-sm-10 vmo-get-social">
+                <h3 class="primaryfont secondaryColor">Like and Recommend your Favorite Beers</h3>
+            </div>
+        </div>
+    </div>
+    <div id="vmo-carousel-social" class="vmo-carousel-border primaryColor animated fadeIn" ng-if="locationSpecils">
+        <div id="social-list" class="carousel carousel-fade slide" data-interval="{{slideTimeInterval}}" data-pause="false" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="item" ng-class="{active:!$index}" style="transition: opacity ease-in-out 2s;-moz-transition: opacity ease-in-out 2s;-webkit-transition:opacity ease-in-out 2s" ng-repeat="d in vm.locationspecials">
+                    <div class="vmo-specials-recent primaryColor text-center">
+                        <h3 class="primaryfont specialsColor specialsFont" style="margin-top: 12px;">{{d.locationSpecial.specials}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

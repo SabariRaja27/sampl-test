@@ -1,0 +1,663 @@
+/*Beerboard Application CSS*/
+
+$white-color: #fff
+$white-transparent: rgba(264,264,264,0.2)
+$black-transparent: rgba(0,0,0,0.5)
+$beerboard-orange: #f27226
+
+$slate-bg: url(../images/background.jpg)
+$black-bg: #000
+$bg-color: none
+
+/*-------Custom CSS-------*/
+@font-face
+  font-family: 'appleberry'
+  src: url("../fonts/appleberry.ttf") format("truetype")
+  font-weight: normal
+  font-style: normal
+@font-face
+  font-family: 'avantgarde-bold'
+  src: url("../fonts/avantgarde-bold.ttf") format("truetype")
+  font-weight: normal
+  font-style: normal
+@font-face
+  font-family: 'SimonScript'
+  src: url("../fonts/SimonScript.ttf") format("truetype")
+  font-weight: normal
+  font-style: normal
+@font-face
+  font-family: 'jotterscript'
+  src: url("../fonts/jotterscript.ttf") format("truetype")
+  font-weight: normal
+  font-style: normal
+
+body
+  font-family: 'appleberry'
+  background-attachment: fixed
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  background-attachment: cover
+  color: $white-color
+  background-color: #000
+  cursor: context-menu
+
+::selection
+  color: $white-color
+  background: $white-transparent
+
+a
+  color: $white-color
+
+a:hover,
+a:focus
+  outline: 0px solid
+
+img
+  max-width: 100%
+  height: auto
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  font-weight: 500
+  margin: 0 0 15px
+
+ins
+  color: #c1c1c1
+
+/* Code for Firefox */
+::-moz-selection 
+  color: $white-color
+  background: $beerboard-orange
+.floatleft
+  float: left
+
+.floatright
+  float: right
+
+.alignleft
+  float: left
+  margin-right: 15px
+
+.alignright
+  float: right
+  margin-left: 15px
+
+.aligncenter
+  display: block
+  margin: 0 auto 15px
+
+h3
+  margin: 20px 5px 10px 5px
+  font-size: 28px
+
+ins
+  text-decoration: none
+
+a:hover
+  color: $beerboard-orange
+  text-decoration: none
+  text-shadow: 0px 0px 13px rgba(242, 114, 38, 0.64)
+
+a:active,
+a:focus
+  color: $beerboard-orange
+  text-decoration: none
+
+table
+  width: 100%
+
+/*Carousel Slider CSS*/
+
+.carousel
+  .carousel-fade
+    .item 
+      transition: opacity 0.5s ease-in-out
+      moz-transition: opacity 0.5s ease-in-out
+    .active
+      .left,
+      .right
+        left: 0
+        z-index: 2
+        opacity: 0
+
+.carousel-fade
+  .carousel-inner
+    h3
+      color: #fff
+    .item
+      opacity: 0
+      -webkit-transition-property: opacity
+      -moz-transition-property: opacity
+      -o-transition-property: opacity
+      transition-property: opacity
+
+    .active
+      opacity: 1
+
+    .active.left,
+    .active.right
+      left: 0
+      opacity: 0
+      z-index: 1
+      
+.carousel-fade
+  .carousel-inner
+    .item
+      opacity: 0
+      -webkit-transition-property: opacity
+      -moz-transition-property: opacity
+      -o-transition-property: opacity
+      transition-property: opacity
+
+    .active
+      opacity: 1
+
+    .active.left,
+    .active.right
+      left: 0
+      opacity: 0
+      z-index: 2
+
+  .carousel-control
+    z-index: 2
+/*End of Carousel Slider CSS*/
+
+.vmo-resto-logo
+  margin-top: 10px
+  text-align: center
+  margin-left: auto
+  margin-right: auto
+
+
+.vmo-single-product-area
+  position: relative
+  overflow: hidden
+  margin-top: 10px
+  padding: 0px 30px 20px 30px
+  text-align: center
+
+.vmo-sidebar-title
+  color: #ff8
+  font-size: 30px
+  margin-top: 20px
+  margin-bottom: 20px
+  text-transform: uppercase
+
+#vmo-product-details
+  padding: 30px 0px 10px 0px
+
+  h4
+    font-weight: 500
+    line-height: 1.5em
+    color: #fff
+
+  .vmo-single-product-area
+    margin-top: 40px
+    padding: 10px 0 0px
+
+  .vmo-hr-bottom
+    border-bottom: 1px solid $white-color
+
+  .vmo-big-border
+    width: 100%
+    border-top: 3px solid $white-color
+    border-bottom: 3px solid $white-color
+
+.vmo-product-content 
+  td,
+  th
+    font-size: 15px
+
+.vmo-product-heading
+  h1
+    color: $white-color
+
+.vmo-product-description
+  td,
+  th
+    font-size: 22px
+    line-height: 1.6em
+
+.vmo-product-img
+  max-height: 250px
+  margin: 0px 20px 20px 20px
+  text-align: center
+
+#vmo-product-page 
+  .vmo-back-to-home
+    text-align: left
+    vertical-align: middle
+    padding: 10px
+    font-weight: 700
+    font-size: 18px
+
+.vmo-get-social
+  h3
+    font-weight: 500
+    text-align: left
+
+.vmo-sub-detail-left
+  margin-left: 30px
+  padding-left: 20px
+  float: left
+
+.vmo-detail-left
+  margin-left: 15px
+  margin-bottom: 0px
+  padding: 2px 0px 2px 0px
+  float: left
+
+.vmo-detail-right
+  margin-right: 15px
+  padding-right: 20px
+  float: right
+
+.vmo-heading-small-screen
+  display: none
+  text-align: center
+
+.vmo-heading-large-screen
+  display: block
+  color: #fff
+.vmo-carousel-border
+  border: 3px solid
+
+.vmo-specials-recent
+  padding: 15px
+  max-width: 545px
+  margin-left: auto
+  margin-right: auto
+
+.vmo-thubmnail-recent
+  margin-bottom: 30px
+  padding: 15px
+  border: 3px solid
+  max-width: 545px
+  margin-left: auto
+  margin-right: auto
+
+/**Footer**/
+.vmo-beerboard-logo
+  float: right
+  padding: 5px
+  background-color: $black-transparent
+
+.navbar-fixed-bottom
+  bottom: 0
+  padding-bottom: 15px
+  border-width: 1px 0 0
+
+.navbar-default
+  background-color: transparent
+
+.table
+  tbody>tr>td
+    padding: 0px
+    line-height: 1.6
+    vertical-align: top
+    border-top: none
+
+.table-hover
+  tbody>tr:hover
+    background-color: $white-transparent
+
+.vmo-img-margin30
+  margin-top: 15px
+
+ins
+  font-size: 18px
+
+.modal-footer
+  padding: 15px
+  text-align: center
+  border: none
+
+.modal-body
+  color: #fff
+  text-align: center
+
+.modal-content
+  background: $slate-bg
+  padding: 40px 20px
+
+.clickable
+  cursor: pointer
+
+.carousel-inner,
+.vmo-thubmnail-recent,
+.vmo-get-social
+  h3
+    color: #fff
+
+.vmo-thubmnail-recent
+  h1
+    color: #fff
+
+.vmo-product-description
+  color: #fff
+
+.vmo-full-bg
+  position: fixed
+  top: 50%
+  left: 50%
+  width: 100%
+  height: 100%
+  z-index: -100
+  -ms-transform: translateX(-50%) translateY(-50%)
+  -moz-transform: translateX(-50%) translateY(-50%)
+  -webkit-transform: translateX(-50%) translateY(-50%)
+  transform: translateX(-50%) translateY(-50%)
+  background-size: cover
+  background-color: #000
+
+.vmo-full-bg-img
+  position: fixed
+  top: 50%
+  left: 50%
+  height: 100%
+  width: auto
+  z-index: -100
+  -ms-transform: translateX(-50%) translateY(-50%)
+  -moz-transform: translateX(-50%) translateY(-50%)
+  -webkit-transform: translateX(-50%) translateY(-50%)
+  transform: translateX(-50%) translateY(-50%)
+  background-color: #000
+  
+.container
+    width: 95%
+
+.carousel-property
+    min-height: 550px
+
+.col-1,
+.col-2
+    width: 293px
+
+.social-font
+  font-family: 'SimonScript'
+  color: #ff8
+
+/*Media Queries*/
+/*For TV*/
+@media (min-width: 1921px)
+  .vmo-resto-logo 
+    margin-top: 10px
+    margin-bottom: 20px
+    width: 480px
+    max-height: 280px
+    margin-left: auto
+    margin-right: auto
+
+@media (max-width: 1921px)
+  .vmo-thubmnail-recent 
+    margin-top: 20px
+
+  .vmo-product-content
+    td,
+    .vmo-product-content
+      th
+        font-size: 20px
+
+  #vmo-product-details
+    h4
+      font-size: 24px
+  
+  .vmo-sidebar-title
+    font-size: 55px
+    margin-top: 36px
+
+  h3
+    font-size: 52px
+
+  ins
+    font-size: 32px
+
+
+  .vmo-resto-logo 
+    margin-top: 10px
+    width: 480px
+    max-height: 280px
+    margin-left: auto
+    margin-right: auto
+  
+  .social-font
+    font-size: 62px
+
+@media (max-width: 1820px)
+  .vmo-sidebar-title
+    font-size: 55px
+    margin-top: 30px
+    margin-bottom: 25px
+  h3
+    font-size: 44px
+
+  ins
+    font-size: 32px
+
+  .social-font
+    font-size: 60px
+
+  .vmo-thubmnail-recent 
+    margin-top: 60px
+
+  .vmo-resto-logo 
+    max-width: 396px
+    min-width: 300px
+    max-height: 200px
+
+
+@media (max-width: 1780px)
+  .vmo-sidebar-title
+    font-size: 35px
+
+@media (max-width: 1650px)
+  .vmo-thubmnail-recent 
+    margin-top: 35px
+
+  .vmo-product-content
+    td,
+    .vmo-product-content
+      th
+        font-size: 20px
+
+  #vmo-product-details
+    h4
+      font-size: 24px
+  
+  .vmo-sidebar-title
+    font-size: 35px
+    margin-top: 44px
+
+  h3
+    font-size: 32px
+
+  ins
+    font-size: 24px
+
+  .vmo-resto-logo
+    margin-top: 10px
+    margin-left: auto
+    margin-right: auto
+    width: 300px
+    min-width: 0px
+
+  .social-font
+    font-size: 40px  
+
+@media(max-width:1580px)
+
+  .vmo-sidebar-title
+    font-size: 35px
+    margin-bottom: 20px
+
+@media(max-width:1480px)
+  .vmo-sidebar-title
+    font-size: 38px
+    margin-top: 15px
+
+  h3 
+    font-size: 32px
+    margin: 15px 5px 15px 5px
+
+    
+@media(max-width:1380px)
+  .vmo-sidebar-title
+    font-size: 35px
+
+@media(max-width:1280px)
+  .vmo-sidebar-title
+    font-size: 35px
+
+  .vmo-resto-logo
+    margin-top: 10px
+    margin-left: auto
+    margin-right: auto
+    width: 300px
+    min-width: 0px
+
+  .social-font
+    font-size: 32px
+
+  ins
+    font-size: 20px
+  h3
+    margin: 28px 5px 8px 5px
+
+@media(max-width:1024px)
+  .vmo-sidebar-title
+    font-size: 34px
+  h3
+    font-size: 32px
+  ins
+    font-size: 18px
+  .vmo-resto-logo
+    margin-top: 5px
+    margin-left: auto
+    margin-right: auto
+    min-width: 0px
+
+
+/*For small screen monitors*/
+@media(max-width:991px)
+  h3
+    margin: 25px 5px 5px 5px
+
+  #vmo-product-details
+    padding: 10px 10px 0px 10px
+
+  .vmo-product-img
+    max-height: 500px
+    margin: 5px
+
+  .vmo-detail-left
+    float: left
+    margin-left: 5px
+    padding-left: 10px
+
+  .vmo-sub-detail-left
+    float: left
+    margin-left: 20px
+    padding-left: 10px
+
+  .vmo-detail-right
+    float: right
+    margin-right: 5px
+    padding-right: 10px
+
+  .vmo-product-content td,
+  .vmo-product-content th
+    font-size: 16px
+
+  .vmo-product-description td,
+  .vmo-product-description th
+    font-size: 18px
+    vertical-align: top
+    padding-left: 5px
+
+  .vmo-product-heading 
+    h1
+      font-size: 22px
+      color: $white-color
+      text-align: center
+
+  #vmo-product-page
+    .vmo-back-to-home
+      margin-bottom: 15px
+
+  .vmo-heading-small-screen
+    display: block
+
+  .vmo-heading-large-screen
+    display: none
+
+  .navbar-fixed-top,
+  .navbar-fixed-bottom
+    position: static
+
+  .vmo-beerboard-logo
+    background-color: transparent
+
+  .carousel-property
+    min-height: 425px
+
+@media(max-width:944px)
+  .vmo-full-bg
+    width: 100%
+    height: auto
+    background-color: #000
+  .vmo-full-bg-img
+    width: 100%
+    height: auto
+  
+    
+/*For Mobile & Tablets*/
+@media(max-width:767px)
+  .carousel-property
+    min-height: 415px
+  .vmo-heading-small-screen
+    display: block
+  .vmo-heading-large-screen
+    display: none
+  .vmo-product-description
+    margin-top: 20px
+  .vmo-get-social
+    h3
+      text-align: center
+
+/*For Mobile*/
+@media(max-width:480px)
+  .vmo-product-description
+    margin-top: 20px
+
+  .vmo-product-img
+    max-height: 100%
+    margin: 0 0 5px 0
+
+  .vmo-heading-small-screen
+    display: block
+
+  .vmo-heading-large-screen
+    display: none
+
+  .navbar-fixed-top,
+  .navbar-fixed-bottom
+    position: static
+
+  .vmo-beerboard-logo
+    background-color: transparent
+
+  .carousel-property
+    min-height: 415px
+
+  .vmo-get-social
+    h3
+      text-align: center
+/*End of Media Queries*/
+
+/*-------End of Customise CSS-------*/
+  

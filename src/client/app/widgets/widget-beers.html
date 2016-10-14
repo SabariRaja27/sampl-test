@@ -1,0 +1,21 @@
+<div class="col-md-4 text-center carousel-property animated fadeIn">
+
+    <div id="slide-list" class="carousel carousel-fade slide" data-interval="{{slideTimeInterval}}" data-pause="false" data-ride="carousel">
+        <div class="carousel-inner">            
+            <div class="item" style="transition: opacity ease-in-out 2s;-moz-transition: opacity ease-in-out 2s;-webkit-transition:opacity ease-in-out 2s" ng-class="{active:!$index}" ng-repeat="item in data ">
+               <div ng-repeat="(key, value) in item">
+                    <div ng-if="grouptitle">
+                        <h1 class="vmo-sidebar-title secondaryfont primaryColor" >{{key}}</h1>
+                    </div>
+                    <a ui-sref="details({id:d.productId})" data-locationId='{{vm.locationId}}' ng-repeat="d in value">
+                        <div>
+                            <h3 class="primaryfont secondaryColor">{{d.name}}</h3>
+                            <ins class="primaryfont secondaryColor">{{d.style}} &vert; {{d.origin}} &vert; {{d.abv}}</ins>
+                        </div>
+                    </a>
+                </div>
+            </div>      
+        </div>     
+    </div>
+
+</div>

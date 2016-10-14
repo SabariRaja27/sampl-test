@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="en" manifest="manifest.appcache">
+  <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+      <title ng-bind="title"></title>
+    <title>Beerboard - [Location Name]</title>
+      <base href="/">
+      <style>
+          /* This helps the ng-show/ng-hide animations start at the right place. */
+          /* Since Angular has this but needs to load, this gives us the class early. */
+          .ng-hide { display: none!important; }
+      </style>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.png"> 
+      <link href='https://fonts.googleapis.com/css?family=Neucha' rel='stylesheet' type='text/css'>
+      <!-- build:css styles/lib.css-->
+      <!-- bower:css-->
+      <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+      <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css" />
+      <link rel="stylesheet" href="/bower_components/toastr/toastr.css" />
+      <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
+      <!-- endbower-->
+      <!-- endbuild-->
+
+      <!-- build:css styles/app.css-->
+      <!-- inject:css-->
+      <link rel="stylesheet" href="/.tmp/styles.css">
+      <!-- endinject-->
+      <!-- endbuild-->
+      
+     <!--Binding the fonts dynamically starts here-->
+      <style type="text/css">
+        @font-face {
+          font-family: "primaryfont";
+          src: url({{primaryfont}});
+        }
+         @font-face {
+          font-family: "secondaryfont";
+          src: url({{secondaryfont}});
+        }
+        .primaryfont { font-family: "primaryfont"}
+        .secondaryfont { font-family: "secondaryfont"}
+        .primaryColor{color: {{primaryColour}} !important;}
+        .secondaryColor{color:{{secondaryColour}} !important;}
+        .specialsColor{color:{{specialsColor}} !important;}
+
+        @media (min-width: 1700px){
+          .specialsFont{
+            font-size: {{specialsFont}};
+          }
+          .vmo-sidebar-title{
+            font-size: {{majorStyleFont}};
+          }
+          .vmo-very-big-title{
+            font-size: {{majorStyleFont}};
+          }
+          h3{
+            font-size: {{beerNameFont}};
+          }
+          ins{
+            font-size: {{descriptionFont}};
+          }
+          .vmo-product-content td, th{
+            font-size: {{nutritionFont}};
+          }
+          #vmo-product-details h4{
+              font-size: {{descriptionFont}};
+          }
+          .vmo-featured-name{
+            font-size: 100px;
+          }
+          .vmo-featured-art{
+            margin-top: -50px;
+          }
+        }
+        body{
+          background-image: url('{{backgroundImage}}');
+          background-color: {{background}};
+        }
+        
+      </style>
+     <!--Binding the fonts dynamically ends here-->
+  </head>
+  <body>
+
+     <!-- No Data -->
+    <!-- <div class="modal fade" id="no-data" tabindex="-1" role="dialog" aria-labelledby="no-data-lable">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h3>The description for that beer is not available at this time.</h3>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>-->
+
+    <div ng-include="'app/layout/shell.html'"></div>
+
+
+  </body>   
+  <script src="data/config.js"></script>  
+  <!-- build:js js/lib.js-->
+  <!-- bower:js-->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/angular/angular.js"></script>
+  <script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="/bower_components/extras.angular.plus/ngplus-overlay.js"></script>
+  <script src="/bower_components/moment/moment.js"></script>
+  <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="/bower_components/toastr/toastr.js"></script>
+  <script src="/bower_components/angular-animate/angular-animate.js"></script>
+  <script src="/bower_components/jquery.easing/js/jquery.easing.js"></script>
+  <script src="/bower_components/underscore/underscore.js"></script>
+  <script src="/bower_components/angular-cache/dist/angular-cache.js"></script>
+  <script src="/bower_components/angular-indexedDB/angular-indexed-db.js"></script>
+  <!-- endbower-->
+  <!-- endbuild-->
+  <!-- build:js js/app.js-->
+  <!-- inject:js-->
+  <script src="/src/client/app/app.module.js"></script>
+  <script src="/src/client/app/analytics/analytics.module.js"></script>
+  <script src="/src/client/app/beerboard/beerboard.module.js"></script>
+  <script src="/src/client/app/core/core.module.js"></script>
+  <script src="/src/client/app/details/details.module.js"></script>
+  <script src="/src/client/app/layout/layout.module.js"></script>
+  <script src="/src/client/app/product/product.module.js"></script>
+  <script src="/src/client/app/widgets/widgets.module.js"></script>
+  <script src="/src/client/app/blocks/exception/exception.module.js"></script>
+  <script src="/src/client/app/blocks/logger/logger.module.js"></script>
+  <script src="/src/client/app/blocks/router/router.module.js"></script>
+  <script src="/src/client/app/blocks/underscore/underscore.module.js"></script>
+  <script src="/src/client/app/main.js"></script>
+  <script src="/src/client/app/analytics/analytics.interceptor.js"></script>
+  <script src="/src/client/app/beerboard/beerboard.constants.js"></script>
+  <script src="/src/client/app/beerboard/beerboard.service.js"></script>
+  <script src="/src/client/app/core/common.js"></script>
+  <script src="/src/client/app/core/config.js"></script>
+  <script src="/src/client/app/core/constants.js"></script>
+  <script src="/src/client/app/core/dataservice.js"></script>
+  <script src="/src/client/app/details/details.controller.js"></script>
+  <script src="/src/client/app/details/details.route.js"></script>
+  <script src="/src/client/app/details/details.service.js"></script>
+  <script src="/src/client/app/layout/shell.controller.js"></script>
+  <script src="/src/client/app/product/product.controller.js"></script>
+  <script src="/src/client/app/product/product.route.js"></script>
+  <script src="/src/client/app/product/product.service.js"></script>
+  <script src="/src/client/app/widgets/list-beers-directive.js"></script>
+  <script src="/src/client/app/blocks/exception/exception-handler.provider.js"></script>
+  <script src="/src/client/app/blocks/exception/exception.js"></script>
+  <script src="/src/client/app/blocks/logger/logger.js"></script>
+  <script src="/src/client/app/blocks/router/router-helper.provider.js"></script>
+  <script src="/src/client/app/blocks/underscore/underscore.js"></script>
+  <!-- endinject-->
+  <!-- inject:templates:js-->
+  <!-- endinject-->
+  <!-- endbuild-->
+
+</html>

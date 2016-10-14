@@ -1,0 +1,73 @@
+<div id="vmo-product-details" class="container-fluid aligncenter animated fadeIn" style="background-color: #000">
+  <div class="col-sm-offset-2 col-sm-8 vmo-border-bottom">
+	  <h1 class="vmo-sidebar-title secondaryfont primaryColor text-center">
+      <div ng-if="marketingBeerItem.local==1" >
+      <img src="{{vm.imageContext}}/images/art-left.png"  class="vmo-featured-art" alt="">
+      &nbsp;<span class="vmo-featured-name">Local Beer</span>&nbsp;
+      <img src="{{vm.imageContext}}/images/art-right.png"  class="vmo-featured-art"  alt="">
+      </div>
+
+      <div ng-if="marketingBeerItem.featured==1">
+      <img src="{{vm.imageContext}}/images/art-left.png"  class="vmo-featured-art" alt="">
+      &nbsp;<span class="vmo-featured-name">Featured Beer</span>&nbsp;
+      <img src="{{vm.imageContext}}/images/art-right.png" class="vmo-featured-art" alt="">
+      </div>
+
+      <div ng-if="marketingBeerItem.cask==1" >
+      <img src="{{vm.imageContext}}/images/art-left.png"  class="vmo-featured-art" alt="">
+      &nbsp;<span class="vmo-featured-name">Cask Beer</span>&nbsp;
+      <img src="{{vm.imageContext}}/images/art-right.png" class="vmo-featured-art" alt="">
+      </div>
+    </h1>
+  </div>
+	<div class="col-sm-offset-2 col-sm-8">
+    <div class="col-sm-12">
+      <h3 style="margin-left: 0;" class="primaryfont secondaryColor">{{marketingBeerItem.name}}</h3>
+    </div>
+    <div class="col-sm-8">
+      <ins class="secondaryfont secondaryColor">{{marketingBeerItem.style}}</ins>
+    </div>
+    <div class="col-sm-2" style="text-align: right;">
+      <ins class="secondaryfont secondaryColor">ABV&nbsp;{{marketingBeerItem.abv}}</ins>
+    </div>
+     <div class="col-sm-2" style="text-align: right;">
+      <ins class="secondaryfont secondaryColor">IBU&nbsp;{{marketingBeerItem.ibu}}</ins>
+    </div>
+  </div>
+</div>
+<div class="container-fluid aligncenter">
+  <div>
+    <div class="col-sm-offset-2 col-sm-4 col-xs-6 vmo-brew-logo">
+      <img  src="{{marketingBeerItem.brewLogo}}" class="vmo-logo-height" alt="">
+    </div>
+    <div class="col-sm-4 col-xs-6 vmo-glass-logo">
+      <img  src="{{marketingBeerItem.glassLogo}}" class="vmo-logo-height" alt="">
+    </div>
+  </div>
+</div>
+<style>
+  body{
+    background-image: url('{{vm.imageContext}}/images/featured-bg.jpg')!important;
+  }
+  .vmo-featured-art{
+    max-width: 60px;
+  }
+  .vmo-brew-logo{
+    text-align: left;
+  }
+  .vmo-glass-logo{
+    text-align: right;
+  }
+  .vmo-border-bottom{
+    border-bottom: 2px solid #fff;
+  }
+  @media(max-width:767px){
+    .vmo-featured-art{
+      max-width: 25px;
+    }
+    .vmo-logo-height{
+      max-height: 200px;
+    }
+  }
+</style>
+

@@ -1,0 +1,34 @@
+[
+    {
+        "category": "Ales",
+        "products" : [
+            {"id": 10001,"brand" : "Yards Brawler Ale","name" : "English Dark Mild Ale","origin" : "Germany","alcohol":"4.2"},
+            {"id": 10002,"brand" : "Cream Ale","name" : "Weizenbock","origin" : "PA","alcohol":"4.2"},
+            {"id": 10003,"brand" : "Schneider Aventinus","origin" : "American Black Ale","origin" : "NJ","alcohol":"4.2"},
+            {"id": 10004,"brand" : "Six Point Sweet Action","origin" : "American amber Ale","origin" : "NJ","alcohol":"4.2"},
+            {"id": 10005,"brand" : "Uinta Dubhe Imperial Black IPA","origin" : "Witbier","origin" : "NJ","alcohol":"4.2"},
+            {"id": 10006,"brand" : "Brooklyn Lager","origin" : "English Dark Mild Ale","origin" : "NY","alcohol":"4.2"}]
+    },
+    {
+        "id": 10001,
+        "category": "Amber/Red Ales & Largers",
+        "products" : [
+            {"id": 10001,"brand" : "Yards Brawler Ale","name" : "English Dark Mild Ale","origin" : "Germany","alcohol":"4.2"},
+            {"id": 10002,"brand" : "Cream Ale","name" : "Weizenbock","origin" : "PA","alcohol":"4.2"},
+            {"id": 10003,"brand" : "Schneider Aventinus","origin" : "American Black Ale","origin" : "NJ","alcohol":"4.2"},
+            {"id": 10004,"brand" : "Six Point Sweet Action","origin" : "American amber Ale","origin" : "NJ","alcohol":"4.2"},
+            {"id": 10005,"brand" : "Uinta Dubhe Imperial Black IPA","origin" : "Witbier","origin" : "NJ","alcohol":"4.2"},
+            {"id": 10006,"brand" : "Brooklyn Lager","origin" : "English Dark Mild Ale","origin" : "NY","alcohol":"4.2"}]
+    },
+    {
+        "category": "AMBER/RED",
+        "products" : [
+            {"id": 10001,"brand" : "Yards Brawler Ale","name" : "English Dark Mild Ale","origin" : "Germany","alcohol":"4.2"},
+            {"id": 10002,"brand" : "Cream Ale","name" : "Weizenbock","origin" : "PA","alcohol":"4.2"},
+            {"id": 10003,"brand" : "Schneider Aventinus","origin" : "American Black Ale","origin" : "NJ","alcohol":"4.2"},
+            {"id": 10004,"brand" : "Six Point Sweet Action","origin" : "American amber Ale","origin" : "NJ","alcohol":"4.2"},
+            {"id": 10005,"brand" : "Uinta Dubhe Imperial Black IPA","origin" : "Witbier","origin" : "NJ","alcohol":"4.2"},
+            {"id": 10006,"brand" : "Brooklyn Lager","origin" : "English Dark Mild Ale","origin" : "NY","alcohol":"4.2"}]
+    }
+
+]

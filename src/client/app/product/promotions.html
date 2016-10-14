@@ -1,0 +1,17 @@
+    <div id="vmo-bg-full-video">
+        <video id="{{video.locationPromotion.creative}}" autoplay ng-repeat="video in vm.videoAssets" class="vmo-full-bg animated fadeIn" ng-if="promoVisiblity[video.locationPromotion.url]">        
+          <source ng-src="{{trustSrc(video.locationPromotion.url)}}" type="video/mp4">
+        </video>
+    </div>
+    <div id="vmo-bg-full-image">
+         <img id="{{image.locationPromotion.creative}}" ng-src="{{image.locationPromotion.url}}" ng-repeat="image in vm.imageAssets" class="vmo-full-bg-img ng-hide animated fadeIn" ng-show="promoVisiblity[image.locationPromotion.url]"/>
+    </div>
+    <style>
+    body{
+    	background-image: url(../images/black-bg.png);
+    }
+    </style>
+<!--
+http://thenewcode.com/777/Create-Fullscreen-HTML5-Page-Background-Video
+-->
+   

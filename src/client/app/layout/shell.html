@@ -1,0 +1,20 @@
+<div ng-controller="Shell as vm">
+    <div id="vmo-product-page" class="vmo-single-product-area" ng-hide="promotions || showMarketingBeerItem">
+        <div class="container">
+            <div class="row">
+                <div ng-show="vm.backbutton" class="col-sm-4 vmo-back-to-home">
+                    <a class="primaryfont primaryColor" href="index.html">&#10094;&nbsp;Back to Home</a>
+                </div>
+                <div ng-hide="vm.backbutton" class="col-sm-4"></div>
+                <div class="col-sm-4 text-center"></div>
+                <div class="col-sm-offset-4"></div>
+            </div>
+        </div>
+    </div>
+    <section id="content" class="container-fluid">
+        <div ui-view class=""></div>
+        <!-- Please uncomment the below div and comment the above div to view the featuredPromotion html page -->
+        <!-- <div ng-include="'app/product/featured-product.html'" ng-hide="promotions"></div> -->
+    </section>
+    <div ng-include="'app/layout/footer.html'" ng-hide="promotions"></div>
+</div>
